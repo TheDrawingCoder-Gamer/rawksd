@@ -25,8 +25,8 @@ INCLUDES	:=	. include
 # options for code generation
 #---------------------------------------------------------------------------------
 
-CFLAGS	= -g -O2 -Wall $(MACHDEP) $(INCLUDE)
-CXXFLAGS	=	$(CFLAGS)
+CFLAGS	= -g -O2 -Wall $(MACHDEP) $(INCLUDE) -Wno-incompatible-pointer-types -std=c99 -DWITHOUT_TRIO
+CXXFLAGS	=	$(CFLAGS) -std=c++03
 
 LDFLAGS	=	-g $(MACHDEP) -Wl,-Map,$(notdir $@).map
 

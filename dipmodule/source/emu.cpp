@@ -5,6 +5,7 @@
 
 #include <files.h>
 #include <mem.h>
+#include <strings.h>
 
 #define EMU_PRIORITY 0x48
 #define TITLEFILE_MEMORY

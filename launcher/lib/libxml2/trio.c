@@ -44,6 +44,8 @@
 /*************************************************************************
  * Trio include files
  */
+
+#if !defined(WITHOUT_TRIO)
 #include "triodef.h"
 #include "trio.h"
 #include "triop.h"
@@ -6867,3 +6869,5 @@ TRIO_ARGS1((errorcode),
       return "Unknown";
     }
 }
+
+#endif

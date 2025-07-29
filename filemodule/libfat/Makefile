@@ -79,8 +79,8 @@ INCLUDE	:=			$(foreach dir,$(INCLUDES),-I$(ROOT)/$(dir)) \
 ARCH	=	-mcpu=arm926ej-s -mtune=arm926ej-s -mthumb -mthumb-interwork -mbig-endian
 
 CFLAGS	=	-g $(ARCH) $(INCLUDE) -fno-strict-aliasing -Wall -O2 -fomit-frame-pointer -ffast-math -fverbose-asm \
-			-Wstrict-prototypes -Wpointer-arith -Winline -Wundef -g -ffunction-sections -fdata-sections -fno-exceptions -Wno-strict-prototypes -std=gnu99 \
-			-DHAVE_CONFIG_H
+			-Wstrict-prototypes -Wpointer-arith -Winline -Wundef -g -ffunction-sections -fdata-sections -fno-exceptions -Wno-strict-prototypes \
+			-DHAVE_CONFIG_H -std=gnu99
 
 
 AFLAGS	=	-g $(ARCH) -x assembler-with-cpp
