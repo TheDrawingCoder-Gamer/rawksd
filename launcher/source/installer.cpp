@@ -262,7 +262,9 @@ static bool FakesignTMD(signed_blob* blob)
 	tmd* meta = (tmd*)SIGNATURE_PAYLOAD(blob);
 	u32 size = TMD_SIZE(meta);
 	for(u32 fill = 0; fill < 0xFFFF; fill++) {
-		meta->fill3 = fill;
+		// assume that struct size ordering is explicit between versions (why wouldn't it be)
+		// fill2 from 2009 is actually vwii_title today
+		meta->vwii_title = fill;
 		sha1 hash; SHA1((u8*)meta, size, hash);
 
 		if (hash[0] == 0)

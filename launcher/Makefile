@@ -13,6 +13,7 @@ include $(DEVKITPPC)/wii_rules
 TARGET		:=	launcher
 SOURCES		:=	data source lib/libwiigui lib/libwiigui/libwiigui \
 				data/images data/fonts data/sounds
+
 INIT_ADDR := 0x80a00000
 
 LIBS :=	$(LIB_MEGA)

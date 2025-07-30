@@ -100,7 +100,7 @@ ARCH	=	-mcpu=arm926ej-s -mtune=arm926ej-s -mthumb -mthumb-interwork -mbig-endian
 
 CFLAGS	=	-g $(ARCH) $(INCLUDE) -fno-strict-aliasing -Wall -O2 -fomit-frame-pointer -ffast-math -fverbose-asm \
 			-Wpointer-arith -Winline -Wundef -g -ffunction-sections -fdata-sections -fno-exceptions \
-			-Wl,--gc-sections -std=c08
+			-Wl,--gc-sections -std=c11
 
 CPPFLAGS	=	-g $(ARCH) $(INCLUDE) -fno-strict-aliasing -Wall -O2 -fomit-frame-pointer -ffast-math -fverbose-asm \
 			-Wpointer-arith -Winline -Wundef -g -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti \
